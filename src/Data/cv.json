@@ -1,0 +1,87 @@
+{
+  "profile": {
+    "text": [
+      "Fullstack .NET-studerande med erfarenhet av IT-support och pedagogiskt arbete. Jag är en engagerad och ansvarstagande studerande med teknisk problemlösningsförmåga och god kommunikationsförmåga.",
+      "Mitt mål är att utvecklas inom system- och webbutveckling och bidra med användarvänliga och effektiva digitala lösningar."
+    ]
+  },
+
+  "education": [
+    {
+      "title": "Fullstack .NET",
+      "period": "Pågående – Termin 2",
+      "details": [
+        "Frontend: HTML, CSS, JavaScript",
+        "Backend: C#, .NET",
+        "Databaser och systemutveckling"
+      ]
+    },
+    {
+      "title": "IT-relaterad utbildning",
+      "period": "Tidigare studier",
+      "details": [
+        "Grundläggande IT-kunskaper",
+        "Digitala arbetsverktyg",
+        "Programmeringsdiplom"
+      ]
+    }
+  ],
+
+  "experience": [
+    {
+      "role": "Lärarassistent / IT-assistent",
+      "company": "Oxelösunds Campus",
+      "period": "2018–2022",
+      "tasks": [
+        "Teknisk support och felsökning",
+        "Stöd till lärare och elever i digitala verktyg"
+      ]
+    },
+    {
+      "role": "Studiehandledare",
+      "company": "Nyköpings gymnasium",
+      "tasks": [
+        "Pedagogiskt stöd till elever",
+        "Kommunikation och handledning"
+      ]
+    },
+    {
+      "role": "Tolk och översättare (Tigrinja)",
+      "company": "Nyföretagarcentrum Södermanland",
+      "tasks": [
+        "Muntlig tolkning mellan tigrinja och arabiska",
+        "Säkerställde tydlig kommunikation"
+      ]
+    }
+  ],
+
+  "skills": [
+    "HTML5 & CSS3",
+    "JavaScript",
+    "C# & .NET",
+    "Git & GitHub",
+    "SQL & Databashantering"
+  ],
+
+  "languages": [
+    "Svenska – Flytande",
+    "Engelska – Goda kunskaper",
+    "Arabiska – Tal",
+    "Tigrinja – Modersmål"
+  ],
+
+  "traits": [
+    "Ansvarstagande",
+    "Strukturerad",
+    "Problemlösande",
+    "Samarbetsvillig"
+  ],
+
+  "interests": [
+    "Programmering",
+    "Teknik",
+    "Dataspel",
+    "Läsning",
+    "Personlig utveckling"
+  ]
+}
