@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+import Img from "../assets/ars.webp";
 
 
 
@@ -10,6 +9,8 @@ function About() {
     <main>
 
       <h1 id="secret-trigger">Om mig</h1>
+
+      <img src={Img} alt="Bild på Siem" className="cv-image" />
 
       {/* TEXT */}
       <section className="p-om">

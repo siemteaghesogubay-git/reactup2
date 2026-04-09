@@ -1,12 +1,24 @@
 import cv from "../data/cv.json";
 
+import profileImg from "../assets/SIEM.webp";
+
+
+
+
+
 
 function CV() {
   return (
     <main className="cv-container">
+      <h1>Mitt CV</h1>
+      <img src={profileImg} alt="Bild på Siem" className="cv-image" />
 
-      
+    
 
+
+
+        
+        
       <div className="cv-grid">
 
         {/* MAIN COLUMN */}
