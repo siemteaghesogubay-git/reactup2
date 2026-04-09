@@ -8,6 +8,7 @@ function Contact() {
         <p><strong>Telefon:</strong> 0761652614</p>
         <p><strong>Ort:</strong> Stockholm</p>
       </div>
+     
 
     </main>
   );

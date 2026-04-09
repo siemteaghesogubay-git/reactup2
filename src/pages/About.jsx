@@ -2,7 +2,9 @@ import React from 'react';
 
 
 
-<assets />
+
+
+
 function About() {
   return (
     <main>
