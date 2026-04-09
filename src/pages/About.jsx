@@ -1,4 +1,8 @@
+import React from 'react';
 
+
+
+<assets />
 function About() {
   return (
     <main>
@@ -7,7 +11,7 @@ function About() {
 
       {/* TEXT */}
       <section className="p-om">
-
+      
    
 
         <p>

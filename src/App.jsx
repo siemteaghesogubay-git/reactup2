@@ -1,15 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbar";
-import Footer from "./components/fotter";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
 import CV from "./pages/CV";
 import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/contact";
-
-
-
+import Contact from "./pages/Contact";
 
 import "./App.css";
 
@@ -22,12 +19,12 @@ function App() {
 
       {/* ROUTES */}
       <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/about" element={<About />} />
-  <Route path="/cv" element={<CV />} />
-  <Route path="/portfolio" element={<Portfolio />} />
-  <Route path="/contact" element={<Contact />} />
-</Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/cv" element={<CV />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
 
       {/* FOOTER */}
       <Footer />
