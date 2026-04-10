@@ -5,7 +5,7 @@ function Home() {
         
         <h1 id="secret-trigger">Välkommen</h1>
 
-        <h2>
+        <h2 className="subtitle">
           Fullstack .NET-studerande med erfarenhet av IT-support och kommunikation
         </h2>
 
