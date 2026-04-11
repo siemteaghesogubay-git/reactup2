@@ -1,20 +1,44 @@
 /* =========================
    GRUND
 ========================= */
+html, body, #root {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: #eef2f7;
   color: #1e1e1e;
   transition: 0.3s ease;
+  padding: 0 20px;
+}
+
+/* Bilder */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* =========================
-   DARK MODE 
+   DARK MODE
 ========================= */
 body.dark {
   background: #121212;
   color: #e5e5e5;
+}
+
+/* =========================
+   APP LAYOUT
+========================= */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 /* =========================
@@ -41,10 +65,27 @@ body.dark {
 .navbar a {
   text-decoration: none;
   color: white;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #ffdada;
 }
 
 body.dark .navbar {
   background: #1e1e1e;
+}
+
+/* =========================
+   HERO / TEXT
+========================= */
+h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.subtitle {
+  text-align: center;
 }
 
 /* =========================
@@ -96,6 +137,11 @@ body.dark .cv-grid section {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
 }
 
 body.dark .project-card {
@@ -106,11 +152,17 @@ body.dark .project-card {
    BUTTON
 ========================= */
 .btn {
+  display: inline-block;
   background: crimson;
   color: white;
   padding: 8px 15px;
   border-radius: 6px;
   text-decoration: none;
+  margin: 5px;
+}
+
+.btn:hover {
+  background: #b3002d;
 }
 
 /* =========================
@@ -128,7 +180,7 @@ body.dark .footer {
 }
 
 /* =========================
-   TOGGLE KNAPP
+   DARK MODE KNAPP
 ========================= */
 #dark-toggle {
   display: none;
@@ -145,12 +197,57 @@ body.dark .footer {
   cursor: pointer;
 }
 
-h1 {
-  margin-top: 0;
-  text-align: center;
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* TABLET */
+@media (max-width: 900px) {
+
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
 
 }
-.subtitle {
-  text-align: center;
-  
+
+/* MOBIL */
+@media (max-width: 600px) {
+
+  body {
+    padding: 0 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .cv-image {
+    width: 140px;
+    height: 140px;
+  }
+
 }
+
+
+
+
+
+

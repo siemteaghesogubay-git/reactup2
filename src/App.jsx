@@ -13,7 +13,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 
 function App() {
-  // 🔥 FLYTTAD HIT (RÄTT)
+  
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
