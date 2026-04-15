@@ -1,11 +1,44 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App.jsx";
-import "./index.css";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/reactup2">
-    <App />
-  </BrowserRouter>
-);
+import Home from "./pages/Home";
+import About from "./pages/About";
+import CV from "./pages/Cv";
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
+
+import "./App.css";
+
+import { useState, useEffect } from "react";
+
+function App() {
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("dark", dark);
+  }, [dark]);
+
+  return (
+    <div className="app">
+
+      {/* NAVBAR */}
+      <Navbar dark={dark} setDark={setDark} />
+
+      {/* ROUTES */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/cv" element={<CV />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
+      {/* FOOTER */}
+      <Footer />
+
+    </div>
+  );
+}
+
+export default App;
