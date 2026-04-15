@@ -48,7 +48,7 @@ function Portfolio() {
     return repo.language === filter;
   });
 
-  
+  // EGNA PROJEKT
   const projects = [
     {
       title: "HängGubbe",
@@ -81,7 +81,6 @@ function Portfolio() {
 
 
 
-      
       <section>
         <h2>Mina projekt</h2>
         <div className="portfolio-grid">
