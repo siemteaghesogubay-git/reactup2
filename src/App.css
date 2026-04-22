@@ -1,15 +1,25 @@
 /* =========================
-   GRUND
+   RESET
 ========================= */
-html, body, #root {
-  height: 100%;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+/* =========================
+   BODY
+========================= */
 body {
   font-family: 'Poppins', sans-serif;
   background: #eef2f7;
   color: #1e1e1e;
+  line-height: 1.6;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -24,11 +34,34 @@ body {
 
 main {
   flex: 1;
+  width: 100%;
 }
 
 /* =========================
    DARK MODE
 ========================= */
+#dark-toggle {
+  display: none;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background: #2563eb;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+#dark-toggle:checked ~ .page {
+  background: #121212;
+  color: #e5e5e5;
+}
+
 body.dark {
   background: #121212;
   color: #e5e5e5;
@@ -38,19 +71,21 @@ body.dark {
    NAVBAR
 ========================= */
 .navbar {
+  width: 100%;
   background: crimson;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px;
-  position: relative;
+  transition: 0.3s;
 }
 
 .navbar ul {
   display: flex;
   gap: 20px;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .navbar li {
@@ -63,6 +98,10 @@ body.dark {
   font-weight: 500;
 }
 
+.navbar a.active {
+  border-bottom: 2px solid white;
+}
+
 .navbar a:hover {
   color: #ffdada;
 }
@@ -72,168 +111,151 @@ body.dark .navbar {
 }
 
 /* =========================
-   DARK MODE BUTTON
+   HERO
 ========================= */
-#dark-toggle {
-  display: none;
+.hero {
+  width: 100%;
+  padding: 60px 0;
+  text-align: center;
 }
 
-.toggle-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: #2563eb;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
+.hero h1 {
+  font-size: 38px;
+  color: crimson;
+  text-align: center;
+}
+
+.hero h2 {
+  font-weight: 400;
+  color: #555;
+}
+
+body.dark .hero h2 {
+  color: #ccc;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 15px auto;
 }
 
 /* =========================
-   HERO / TEXT
+   ABOUT
 ========================= */
-h1 {
-  text-align: center;
-  margin-top: 20px;
-  color: crimson;
+.about {
+  width: 100%;
+  padding: 40px 0;
 }
 
-.subtitle {
-  text-align: center;
+.about-content {
+  max-width: 900px;
+  margin: auto;
 }
 
-.description {
-  padding: 0 20px;
-  text-align: center;
+.about-content p {
+  margin-bottom: 15px;
 }
 
 /* =========================
    CV
 ========================= */
 .cv-container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
+  width: 100%;
+  padding: 40px 0;
 }
 
 .cv-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 30px;
+  gap: 25px;
 }
 
 .cv-grid section {
   background: white;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.cv-grid section:hover {
+  transform: translateY(-5px);
 }
 
 body.dark .cv-grid section {
   background: #1e1e1e;
 }
 
-/* CV BILD */
+/* CV IMAGE */
 .cv-image {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  margin: 30px auto;
   display: block;
+  margin: 20px auto;
 }
 
 /* =========================
    PORTFOLIO
 ========================= */
 .portfolio {
-  padding: 40px;
-  background: inherit;
-}
-
-body.dark .portfolio {
-  background: #121212;
+  width: 100%;
+  padding: 40px 0;
 }
 
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 20px;
+  gap: 25px;
 }
 
 .project-card {
   background: white;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
   transition: 0.3s;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 body.dark .project-card {
   background: #1e1e1e;
-  color: #e5e5e5;
 }
 
 /* =========================
-   BUTTON
+   BUTTONS
 ========================= */
 .btn {
   display: inline-block;
   background: crimson;
   color: white;
-  padding: 8px 15px;
-  border-radius: 6px;
+  padding: 8px 16px;
+  border-radius: 20px;
   text-decoration: none;
   margin-top: 10px;
+  transition: 0.3s;
 }
 
 .btn:hover {
   background: #b3002d;
 }
 
-body.dark .btn {
-  background: #333;
-}
-
-body.dark .btn:hover {
-  background: #555;
-}
-
-/* =========================
-   FILTER BUTTONS
-========================= */
-.filter-buttons {
-  margin: 20px;
-  text-align: center;
-}
-
-.filter-buttons button {
-  margin: 5px;
-  padding: 8px 15px;
-  cursor: pointer;
-}
-
-.filter-buttons .active {
-  background: black;
-  color: white;
-}
-
 /* =========================
    FOOTER
 ========================= */
 .footer {
-  background: black;
-  color: white;
-  padding: 20px;
+  width: 100%;
+  background: #111;
+  color: #ccc;
+  padding: 20px 0;
   text-align: center;
+  margin-top: 60px;
 }
 
 body.dark .footer {
-  background: #1e1e1e;
+  background: #000;
 }
 
 /* =========================
@@ -242,7 +264,6 @@ body.dark .footer {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
 }
 
 /* =========================
@@ -258,13 +279,35 @@ img {
 
 /* MOBILE */
 @media (max-width: 600px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
   .navbar ul {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
-  h1 {
-    font-size: 22px;
+  .navbar li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+    text-align: center;
   }
 
   .cv-image {
@@ -272,7 +315,4 @@ img {
     height: 140px;
   }
 
-  .portfolio {
-    padding: 20px;
-  }
 }

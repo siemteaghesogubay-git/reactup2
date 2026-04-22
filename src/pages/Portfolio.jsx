@@ -5,6 +5,7 @@ import hangmanImg from "../assets/hänggubbe.webp";
 import schoolImg from "../assets/SchoolManagement pic.webp";
 import portfolioImg from "../assets/hhhh.webp";
 import libraryImg from "../assets/jakobsbergs_bibliotek.webp";
+import socialHealthImg from "../assets/h -app.webp";
 
 function Portfolio() {
 
@@ -73,6 +74,13 @@ function Portfolio() {
       desc: "Biblioteksapp för att hantera böcker och användare.",
       img: libraryImg,
       github: "https://github.com/siemteaghesogubay-git/LibrarySystem.git"
+    },
+
+    {
+      title: "Social Health Challenge",
+      desc: "App för att främja social och mental hälsa.",
+      img: socialHealthImg,
+      github: "https://github.com/siemteaghesogubay-git/SocialHealthChallenge.git"
     }
   ];
 
